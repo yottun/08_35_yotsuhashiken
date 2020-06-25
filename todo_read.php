@@ -58,9 +58,9 @@ if ($status == false) {
   <script type="text/javascript" src="js/style.js"></script>
   <script type="text/javascript" src="js/jquery.japan-map.min.js"></script>
   <script>
-    $(function() {
-      // var areas = [{
 
+    // mapを表示
+    $(function() {
       var areas = [{
           code: 1,
           name: "北海道",
