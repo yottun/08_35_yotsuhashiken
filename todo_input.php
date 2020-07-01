@@ -15,9 +15,10 @@
   <form action="todo_create.php" method="POST">
     <fieldset>
       <legend>売上集計（入力画面）</legend>
-      <a href="todo_read.php">一覧画面</a><a href="todo_management.php">管理画面</a>
+      <a href="todo_read.php">一覧画面</a><a href="todo_search.php">検索画面</a>
       <div>年月:
         <select name="months" id="">
+          <option value="">選択してください</option>
           <option value="2020年1月">2020年1月</option>
           <option value="2020年2月">2020年2月</option>
           <option value="2020年3月">2020年3月</option>
@@ -28,6 +29,7 @@
       </div>
       <div>フロア:
         <select name="floorName" id="">
+          <option value="">選択してください</option>
           <option value="３Ｆ">３Ｆ</option>
           <option value="４Ｆ">４Ｆ</option>
           <option value="５Ｆ">５Ｆ</option>
@@ -35,6 +37,7 @@
       </div>
       <div>ユニットグループ:
         <select name="UG" id="">
+          <option value="">選択してください</option>
           <option value="アダルトエレガンス">アダルトエレガンス</option>
           <option value="アダルトカジュアル">アダルトカジュアル</option>
           <option value="シスターズ">シスターズ</option>
@@ -42,6 +45,7 @@
       </div>
       <div>ユニット:
         <select name="unit" id="">
+          <option value="">選択してください</option>
           <optgroup label="アダルトエレガンス">
             <option value="アクアスキュータム">アクアスキュータム</option>
             <option value="アドーア">アドーア</option>
@@ -58,12 +62,14 @@
       </div>
       <div>PB区分:
         <select name="PB" id="">
+          <option value="">選択してください</option>
           <option value="ﾌﾟﾛﾊﾟｰＰ">ﾌﾟﾛﾊﾟｰＰ</option>
           <option value="ﾌﾟﾛﾊﾟｰＢ">ﾌﾟﾛﾊﾟｰＢ</option>
         </select>
       </div>
       <div>販売場所:
         <select name="place" id="">
+          <option value="">選択してください</option>
           <option value="プロパー">プロパー</option>
           <option value="催事">催事</option>
           <option value="従業員販売">従業員販売</option>
@@ -71,6 +77,7 @@
       </div>
       <div>出身地:
         <select name="prefectures" id="">
+          <option value="">選択してください</option>
           <optgroup label="九州地方">
             <option value="福岡県">福岡県</option>
             <option value="佐賀県">佐賀県</option>
@@ -85,6 +92,7 @@
       </div>
       <div>年齢区分:
         <select name="age" id="">
+          <option value="">選択してください</option>
           <option value="-19">-19</option>
           <option value="20-24">20-24</option>
           <option value="25-29">25-29</option>
