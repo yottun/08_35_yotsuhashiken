@@ -4,14 +4,15 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>患者検索</title>
+   <title>売上集計（検索画面）</title>
+   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
    <form action="todo_management.php" method="POST">
       <fieldset>
          <legend>売上集計（検索画面）</legend>
-         <a href="todo_input.php">入力画面</a><a href="todo_read.php">一覧画面</a>
+         <a href="index.php">入力画面</a><a href="todo_read.php">一覧画面</a>
          <div>年月:
             <select name="months" id="">
                <option value="">選択してください</option>
@@ -119,6 +120,9 @@
    </form>
 
    <style>
+      a {
+         padding-right: 30px;
+      }
    </style>
 
 </body>

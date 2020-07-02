@@ -63,13 +63,14 @@ if ($status == false) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DB連携型todoリスト（一覧画面）</title>
+  <title>検索結果</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <fieldset>
     <legend>検索結果</legend>
-    <a href="todo_input.php">入力画面</a>
+    <a href="index.php">入力画面</a>
     <table>
       <thead>
         <tr>
@@ -95,20 +96,6 @@ if ($status == false) {
   </fieldset>
 
   <style>
-    /* body {
-      background-color: #F1F1F2;
-      margin: 0 auto;
-      text-align: center;
-      color: #685161;
-    }
-
-    legend {
-      font-size: 1.5em;
-    }
-
-    table {
-      width: 700px;
-    } */
   </style>
 </body>
 

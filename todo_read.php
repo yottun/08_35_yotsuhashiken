@@ -747,7 +747,7 @@ if ($status == false) {
   <div class="main">
     <fieldset>
       <legend>売上集計（一覧画面）</legend>
-      <a href="todo_input.php">入力画面</a>
+      <a href="index.php">入力画面</a>
       <table>
         <thead>
           <tr>
@@ -792,17 +792,8 @@ if ($status == false) {
     }
 
     .main_container_middle {
-      /* background: green; */
-      /* border: solid 1px black; */
       height: 30%;
     }
-
-    /* .main_container_bottom {
-      background: yellow;
-      border: solid 1px black;
-      height: 30%;
-    } */
-
     .right_container {
       border: solid 1px black;
       width: 30%;

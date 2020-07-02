@@ -80,5 +80,5 @@ if ($status == false) {
   exit('sqlError:' . $error[2]);
 } else {
   // 正常にSQLが実行された場合は入力ページファイルに移動し，入力ページの処理を実行する
-  header('Location:todo_input.php');
+  header('Location:index.php');
 }
