@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+include("functions.php");
+check_session_id();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -12,7 +21,7 @@
    <form action="todo_management.php" method="POST">
       <fieldset>
          <legend>売上集計（検索画面）</legend>
-         <a href="index.php">入力画面</a><a href="todo_read.php">一覧画面</a>
+         <a href="index.php">入力画面</a><a href="todo_read.php">一覧画面</a><a href="logout.php">ログアウト</a>
          <div>年月:
             <select name="months" id="">
                <option value="">選択してください</option>

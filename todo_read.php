@@ -1,18 +1,9 @@
 <?php
-// DB接続の設定
-// DB名は`gsacf_x00_00`にする
-$dbn = 'mysql:dbname=gsacf_d06_35;charset=utf8;port=3306;host=localhost';
-$user = 'root';
-$pwd = '';
-
-try {
-  // ここでDB接続処理を実行する
-  $pdo = new PDO($dbn, $user, $pwd);
-} catch (PDOException $e) {
-  // DB接続に失敗した場合はここでエラーを出力し，以降の処理を中止する
-  echo json_encode(["db error" => "{$e->getMessage()}"]);
-  exit('dbError:' . $e->getMessage());
-}
+session_start();
+include("functions.php");
+check_session_id();
+// DB接続
+$pdo = connect_to_db();
 
 // データ取得SQL作成(左画面用)
 // $sql = 'SELECT * FROM kadai_table ';
@@ -91,61 +82,6 @@ if ($status == false) {
   <script>
     // mapを表示
     $(function() {
-
-
-      var map_name = {
-        1: "Hokkaido",
-        2: "Aomori",
-        3: "Iwate",
-        4: "Miyagi",
-        5: "Akita",
-        6: "Yamagata",
-        7: "Fukushima",
-        8: "Ibaraki",
-        9: "Tochigi",
-        10: "Gunma",
-        11: "Saitama",
-        12: "Chiba",
-        13: "Tokyo",
-        14: "Kanagawa",
-        15: "Niigata",
-        16: "Toyama",
-        17: "Ishikawa",
-        18: "Fukui",
-        19: "Yamanashi",
-        20: "Nagano",
-        21: "Gifu",
-        22: "Shizuoka",
-        23: "Aichi",
-        24: "Mie",
-        25: "Shiga",
-        26: "Kyoto",
-        27: "Osaka",
-        28: "Hyogo",
-        29: "Nara",
-        30: "Wakayama",
-        31: "Tottori",
-        32: "Shimane",
-        33: "Okayama",
-        34: "Hiroshima",
-        35: "Yamaguchi",
-        36: "Tokushima",
-        37: "Kagawa",
-        38: "Ehime",
-        39: "Kochi",
-        40: "Fukuoka",
-        41: "Saga",
-        42: "Nagasaki",
-        43: "Kumamoto",
-        44: "Oita",
-        45: "Miyazaki",
-        46: "Kagoshima",
-        47: "Okinawa"
-      };
-
-      // for(let i=1; i<=47; i++){
-      //   area[i]
-      // };
 
       var areas = [{
           code: 1,
@@ -747,7 +683,7 @@ if ($status == false) {
   <div class="main">
     <fieldset>
       <legend>売上集計（一覧画面）</legend>
-      <a href="index.php">入力画面</a>
+      <a href="index.php">入力画面</a><a href="logout.php">ログアウト</a>
       <table>
         <thead>
           <tr>
@@ -794,6 +730,7 @@ if ($status == false) {
     .main_container_middle {
       height: 30%;
     }
+
     .right_container {
       border: solid 1px black;
       width: 30%;
